@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
@@ -16,11 +16,25 @@
         <h2>Project List</h2>
         <div class="project-list"></div>
         <button class="btnAdd">
-            <span class="material-symbols-outlined">add</span>
+            <span class="material-symbols-outlined">Add</span>
+            Add Project
         </button>
+        <div class="project-form">
+            <input type="text" class="project-title" placeholder="Project Title">
+            <button class="btnAddProject">ADD</button>
+            <button class="btnCancelProject">CANCEL</button>
+        </div>
     </div>
     <div class="content">Content</div>
     <div class="footer">Made by Volcanowalk</div>
+
+    <dialog class="addTask">
+        <form action="#"
+         class="form-task">
+         
+        </form>
+    </dialog>
+
     <script src="./main.js"></script>
 </body>
 </html>

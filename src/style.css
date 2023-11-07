@@ -29,7 +29,6 @@ h1 {
     text-transform: uppercase;
     color: white;
     animation: slideIn 3s;
-    animation-delay: 1s;
     font-family: 'Stamped';
     font-size: 2rem;
 }
@@ -38,18 +37,69 @@ h1 {
 .sidebar {
     background-color: #739072;
     color: white;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-content: center;
 }
 
-h2 {
+h2, .btnAdd {
     font-family: 'Stamped';
 }
 
 .btnAdd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 20px;
+    font-size: 1rem;
+    border-radius: 9px;
+    color: white;
+    background-color: #739072;
+    border: none;
+}
+
+.btnAdd:hover {
+    background-color: #3A4D39;
+}
+
+.project-form {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.project-title {
+    grid-column: 1 / 3;
+}
+
+.project-form {
+    display: none;
+}
+
+.project-list {
+    padding: 10px;
+}
+
+.div-project {
+    display: flex;
+}
+
+.btnDelete, .btnProject {
+    background-color: #739072;
+    color: white;
+}
+
+.btnProject {
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    width: 100%;
+    border: none;
+}
+
+.btnProject:hover, .btnDelete:hover {
+    background-color: #3A4D39;
 }
 
 /* .content */

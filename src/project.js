@@ -1,10 +1,12 @@
 
 export function createProject(name) {
-    const todos = [];
+    const tasks = [];
 
-    const addTodo = (todo) => {
-        todos.push(todo)
+    const addTask = (task) => {
+        tasks.push(task)
     }
 
-    return { addTodo, name }
+    const getTasks = () => tasks;
+
+    return { addTask, getTasks, name }
 }
