@@ -8,10 +8,6 @@ body, html {
     margin: 0px;
 }
 
-div {
-    border: 1px solid black;
-}
-
 body {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -43,7 +39,7 @@ h1 {
     align-content: center;
 }
 
-h2, .btnAdd {
+h2, .btnAdd, .btnAddProject, .btnCancelProject {
     font-family: 'Stamped';
 }
 
@@ -71,6 +67,9 @@ h2, .btnAdd {
 
 .project-title {
     grid-column: 1 / 3;
+    background-color: #ECE3CE;
+    border-radius: 7px;
+    font-size: 1rem;
 }
 
 .project-form {
@@ -83,11 +82,17 @@ h2, .btnAdd {
 
 .div-project {
     display: flex;
+    margin: 3px;
 }
 
-.btnDelete, .btnProject {
+.btnAddProject, .btnCancelProject {
+    font-size: 1rem;
+}
+
+.btnDelete, .btnProject, .btnAddProject, .btnCancelProject {
     background-color: #739072;
     color: white;
+    border: none;
 }
 
 .btnProject {
@@ -95,17 +100,56 @@ h2, .btnAdd {
     font-family: Arial, Helvetica, sans-serif;
     text-align: left;
     width: 100%;
-    border: none;
 }
 
-.btnProject:hover, .btnDelete:hover {
+.btnProject:hover, .btnDelete:hover, .btnAddProject:hover, .btnCancelProject:hover {
     background-color: #3A4D39;
 }
 
 /* .content */
 .content {
     background-color: #ECE3CE;
-    padding: 30px;
+}
+
+.content-container {
+    visibility: hidden;
+    padding-left: 30px;
+    padding-top: 10px;
+    color: #263225;
+}
+
+.btnAddTask, .task-list {
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #ECE3CE;
+    border: none;
+    border-radius: 8px;
+}
+
+.btnAddTask:hover {
+    background-color: #c8ae72;
+}
+
+.btnAddTask {
+    font-family: 'Stamped';
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.form-task {
+    display: flex;
+    flex-direction: column;
+}
+
+.task-buttons {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
 }
 
 /* footer */
