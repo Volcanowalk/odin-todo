@@ -25,13 +25,39 @@
             <button class="btnCancelProject">CANCEL</button>
         </div>
     </div>
-    <div class="content">Content</div>
+    <div class="content">
+        <div class="content-container">
+            <h2>TASKS</h2>
+            <div class="task-list"></div>
+            <button class="btnAddTask">
+                <span class="material-symbols-outlined">Add</span>
+                Add Task
+            </button>
+        </div>
+    </div>
     <div class="footer">Made by Volcanowalk</div>
 
     <dialog class="addTask">
         <form action="#"
          class="form-task">
-         
+         <label for="task-title">Task title</label>
+         <input type="text" id="task-title">
+         <label for="task-description">Task description</label>
+         <textarea id="task-description" cols="30" rows="5"></textarea>
+         <label for="task-dueDate">Due date</label>
+         <input type="date" id="task-dueDate">
+         <label for="task-priority">Task Priority</label>
+         <select id="task-priority">
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+         </select>
+         <label for="task-notes">Notes</label>
+         <textarea id="task-notes" cols="30" rows="3"></textarea>
+         <div class="task-buttons">
+            <button class="btnSubmitTask">Add Task</button>
+            <button class="btnCloseTask">Close</button>
+        </div>
         </form>
     </dialog>
 
