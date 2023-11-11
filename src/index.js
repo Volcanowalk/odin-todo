@@ -92,8 +92,14 @@ function displayTasks(project) {
     const displayNotes = document.querySelector('.display-notes')
 
     project.getTasks().forEach((task) => {
+        const divTask = document.createElement('div')
+        //Task button
         const btnTask = document.createElement('button')
-        btnTask.textContent = task.title
+        if(task.state) { //If true, task is completed
+            btnTask.innerHTML = `<s>${task.title}</s>`
+        } else {
+            btnTask.textContent = task.title
+        }
         btnTask.classList.add('btnTask')
         btnTask.addEventListener('click', () => {
             displayTitle.textContent = task.title
@@ -104,7 +110,19 @@ function displayTasks(project) {
 
             dialogDisplayTask.showModal()
         })
-        divTaskList.appendChild(btnTask)
+        divTask.appendChild(btnTask)
+
+        //Task clear button
+        const btnClearTask = document.createElement('button')
+        btnClearTask.classList.add('btnClearTask')
+        btnClearTask.innerHTML = `<span class="material-symbols-outlined">
+        done</span>`
+        btnClearTask.addEventListener('click', () => {
+            task.state = true
+            btnTask.innerHTML = `<s>${btnTask.innerHTML}</s>`
+        })
+        divTask.appendChild(btnClearTask)
+        divTaskList.appendChild(divTask)
     })
 }
 

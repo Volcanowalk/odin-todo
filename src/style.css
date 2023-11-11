@@ -126,7 +126,7 @@ h2, .btnAdd, .btnAddProject, .btnCancelProject {
     border-radius: 8px;
 }
 
-.btnAddTask:hover, .btnTask:hover {
+.btnAddTask:hover, .btnTask:hover, .btnClearTask:hover, .btnSubmitTask:hover, .btnCloseTask:hover, .btnCloseTaskDisplay:hover {
     background-color: #c8ae72;
 }
 
@@ -161,6 +161,29 @@ h2, .btnAdd, .btnAddProject, .btnCancelProject {
     border: none;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
+}
+
+.btnClearTask, .btnSubmitTask, .btnCloseTask, .btnCloseTaskDisplay {
+    background-color: #ECE3CE;
+    color: #263225;
+}
+
+.btnClearTask {
+    border: none;
+}
+
+dialog {
+    background-color: #ECE3CE;
+    border-color: #263225;
+    border-radius: 8px;
+}
+
+.addTask, .displayTask .displayTask-label, .btnSubmitTask, .btnCloseTask, .btnCloseTaskDisplay {
+    font-family: 'Stamped';
+}
+
+.task-buttons{
+    margin-top: 3px;
 }
 
 /* footer */
