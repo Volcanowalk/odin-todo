@@ -126,7 +126,7 @@ h2, .btnAdd, .btnAddProject, .btnCancelProject {
     border-radius: 8px;
 }
 
-.btnAddTask:hover {
+.btnAddTask:hover, .btnTask:hover {
     background-color: #c8ae72;
 }
 
@@ -150,6 +150,17 @@ h2, .btnAdd, .btnAddProject, .btnCancelProject {
 .task-list {
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.btnTask {
+    text-align: left;
+    width: 80%;
+    color: #263225;
+    background-color: #ECE3CE;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
 }
 
 /* footer */

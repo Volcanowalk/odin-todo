@@ -14,6 +14,8 @@ const taskForm = document.querySelector('.addTask')
 const btnTaskForm = document.querySelector('.btnAddTask')
 const btnCloseTaskForm = document.querySelector('.btnSubmitTask')
 const btnCloseTask = document.querySelector('.btnCloseTask')
+const btnCloseTaskDisplay = document.querySelector('.btnCloseTaskDisplay')
+const dialogDisplayTask = document.querySelector('.displayTask')
 
 //Open 'add project' form
 btnOpenProjectForm.addEventListener('click', () => {
@@ -83,14 +85,33 @@ function displayProjects() {
 //Display tasks
 function displayTasks(project) {
     const divTaskList = document.querySelector('.task-list')
+    const displayTitle = document.querySelector('.display-title')
+    const displayDescription = document.querySelector('.display-description')
+    const displayDate = document.querySelector('.display-date')
+    const displayPriority = document.querySelector('.display-priority')
+    const displayNotes = document.querySelector('.display-notes')
 
     project.getTasks().forEach((task) => {
         const btnTask = document.createElement('button')
         btnTask.textContent = task.title
         btnTask.classList.add('btnTask')
+        btnTask.addEventListener('click', () => {
+            displayTitle.textContent = task.title
+            displayDescription.textContent = task.description
+            displayDate.textContent = task.dueDate
+            displayPriority.textContent = task.priority
+            displayNotes.textContent = task.notes
+
+            dialogDisplayTask.showModal()
+        })
         divTaskList.appendChild(btnTask)
     })
 }
+
+//Close 'display task'
+btnCloseTaskDisplay.addEventListener('click', () => {
+    dialogDisplayTask.close()
+})
 
 //Open Task form
 btnTaskForm.addEventListener('click', () => {
